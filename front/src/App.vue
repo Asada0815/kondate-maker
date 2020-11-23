@@ -1,5 +1,5 @@
 <template>
-  <v-app>
+  <v-app >
 
     <SideBar :drawer="drawer" />
     <Header @switch="switchSideBar" />

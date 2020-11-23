@@ -1,6 +1,7 @@
 <template>
     <v-card
-        outlined
+        elevation="2"
+        shaped
     >
         <v-img
             max-height="75"
@@ -12,16 +13,16 @@
         <v-container class="py-0">
             <v-row>
                 <v-col cols='6' class="py-0 pl-5">
-                    <h1> title </h1>
+                    <h1> {{name}} </h1>
                 </v-col>
                 <v-spacer />
-                <v-col cols='2' class="text-center">
-                    <v-icon left>mdi-currency-usd-circle</v-icon>
-                    100 円
+                <v-col cols='2' class="text-center font-weight-bold">
+                    <v-icon left  color="secondary">mdi-currency-usd-circle</v-icon>
+                    {{price}} 円
                 </v-col>
-                <v-col cols='2' class="text-center">
-                    <v-icon left>mdi-fire</v-icon>
-                    100 kcal
+                <v-col cols='2' class="text-center font-weight-bold">
+                    <v-icon left  color="accent">mdi-fire</v-icon>
+                    {{calorie}} kcal
                 </v-col>
             </v-row>
         </v-container>
@@ -31,5 +32,10 @@
 
 <script>
   export default {
+      props: {
+          name: String,
+          price: Number,
+          calorie: Number,
+      }
   }
 </script>
