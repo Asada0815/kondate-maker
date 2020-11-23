@@ -33,4 +33,4 @@ services:
     - ./front:/app
     working_dir: /app
     ports:
-    - "3003:3003"
+    - "3003:3000"

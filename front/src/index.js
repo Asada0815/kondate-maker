@@ -1,8 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Foods from './foods';
+import './index.css';
+import Foods from './Foods/Foods';
 
 ReactDOM.render(
-  <Foods />,
-  document.getElementById('container')
+  <React.StrictMode>
+    <Foods />
+  </React.StrictMode>,
+  document.getElementById('root')
 );

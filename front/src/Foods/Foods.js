@@ -24,10 +24,9 @@ class Foods extends Component {
         return (
             <div classname="Foods">
                 <h1>Foods</h1>
-                <h2>{this.state.foods.length}</h2>
                 {this.state.foods.map(food => {
                     console.log(food.id);
-                    return <div>{food.name}  {food.price}</div>
+                    return <div>{food.name}  {food.price} {food.calorie}</div>
                 }
                 )}
             </div>
