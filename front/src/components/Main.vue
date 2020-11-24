@@ -5,11 +5,17 @@
         <FoodCardList :foods="foods" />
       </v-col>
     </v-row>
+    <v-row justify="center">
+      <v-col cols="4">
+        <RegisterFood @submit="getFoodData"/>
+      </v-col>
+    </v-row>
   </v-container>
 </template>
 
 <script>
   import FoodCardList from './FoodCardList'
+  import RegisterFood from './RegisterFood'
   import axios from 'axios'
   axios.defaults.baseURL = 'http://localhost:3500';
   axios.defaults.headers.post['Content-Type'] = 'application/json;charset=utf-8';
@@ -17,7 +23,8 @@
 
   export default {
     components: {
-      FoodCardList
+      FoodCardList,
+      RegisterFood
     },
 
     data: function() {
@@ -26,11 +33,17 @@
       }
     },
 
+    methods: {
+      getFoodData: function() {
+        axios.get('/get')
+          .then(res => {
+            this.foods = res.data;
+          });
+      }
+    },
+
     mounted: function() {
-      axios.get('/get')
-        .then(res => {
-          this.foods = res.data;
-        });
+      this.getFoodData();
     }
   }
 </script>
