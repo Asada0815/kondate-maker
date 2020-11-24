@@ -3,6 +3,7 @@
       color="secondary"
       app
       v-model="drawer"
+      clipped
     >
       <!--  -->
     </v-navigation-drawer>

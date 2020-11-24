@@ -5,7 +5,8 @@
         dark
         shrink-on-scroll
         prominent
-        src="../assets/header.jpeg"
+        clipped-left
+        src="../assets/header.jpg"
         fade-img-on-scroll
       >
       <template v-slot:img="{ props }">
