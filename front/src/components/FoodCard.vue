@@ -5,7 +5,7 @@
     >
         <v-img
             max-height="75"
-            src="https://picsum.photos/id/11/500/300"
+            src="../assets/rice.jpg"
             gradient="to top right, rgba(0,0,0,.0), rgba(25,32,72,0.5)"
         >
         </v-img>
